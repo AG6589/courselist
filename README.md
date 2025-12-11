@@ -70,11 +70,17 @@ No database needed → use in-memory store
 
 Clean UI + API flow
 
+
+
+
 2. Architecture Planning
 
 Separate backend & frontend projects
 
 Clear module separation: routes, components, API services
+
+
+
 
 3. Backend Implementation
 
@@ -88,6 +94,9 @@ Implemented GET + POST routes
 
 Tested with Postman
 
+
+
+
 4. Frontend Implementation
 
 React + Vite setup
@@ -99,6 +108,9 @@ Component-based UI (CourseList + CourseCard)
 Added loading skeleton + search
 
 Tested full flow
+
+
+
 
 5. Final Repo Polishing
 
@@ -117,6 +129,8 @@ Add your screenshots here:
 /screenshots/home.png
 /screenshots/enrolled.png
 /screenshots/api.png
+
+
 
 🛣️ Future Enhancements
 
