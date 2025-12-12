@@ -1,0 +1,77 @@
+.container {
+    padding: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .title-row {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    align-items: end;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .title {
+    font-size: clamp(28px, 5vw, 42px);
+    margin: 0;
+    font-weight: 800;
+  }
+  
+  .search {
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card);
+    color: var(--text);
+    padding: 0 12px;
+    outline: none;
+    box-shadow: var(--shadow);
+  }
+  
+  .grid {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  /* Card base applied in CourseCard via className=course-card */
+  .course-card {
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: 14px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(0,0,0,.12);
+    border-color: color-mix(in oklab, var(--border), var(--primary) 25%);
+  }
+  
+  /* Skeleton */
+  .skeleton { position: relative; overflow: hidden; }
+  .skeleton::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg,
+      transparent, rgba(255,255,255,.08), transparent);
+    animation: shimmer 1.6s infinite;
+  }
+  .sk-line { border-radius: 8px; background: rgba(128,128,128,.25); }
+  .sk-title { height: 26px; width: 70%; margin-bottom: 14px; }
+  .sk-btn   { height: 38px; width: 120px; }
+  
+  @keyframes shimmer {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(100%); }
+  }
+  
+  /* Mobile tweaks */
+  @media (max-width: 640px) {
+    .title-row { grid-template-columns: 1fr; align-items: center; }
+    .search { width: 100%; }
+  }
+  
